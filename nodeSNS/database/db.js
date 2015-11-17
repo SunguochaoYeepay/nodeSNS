@@ -1,11 +1,7 @@
 /**
-<<<<<<< Updated upstream
  * Created by 孙国超 on 15/11/17.
-=======
- * Created by Vincent on 15/11/17.
->>>>>>> Stashed changes
  */
-var settings =require('settings');
+var settings =require('./settings');
 var Db = require('mongodb').Db;
 var Connection = require('mongodb').Connection;//；连接数据库
 
