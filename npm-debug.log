@@ -1,17 +1,19 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
-2 info using npm@1.4.14
-3 info using node@v0.10.29
-4 error Error: ENOENT, open '/Users/sunguochao/Documents/nodeSNS/package.json'
-5 error If you need help, you may report this *entire* log,
-5 error including the npm and node versions, at:
-5 error     <http://github.com/npm/npm/issues>
-6 error System Darwin 15.0.0
-7 error command "node" "/usr/local/bin/npm" "start"
-8 error cwd /Users/sunguochao/Documents/nodeSNS
-9 error node -v v0.10.29
-10 error npm -v 1.4.14
-11 error path /Users/sunguochao/Documents/nodeSNS/package.json
-12 error code ENOENT
-13 error errno 34
-14 verbose exit [ 34, true ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@3.3.6
+3 info using node@v5.0.0
+4 verbose stack Error: ENOENT: no such file or directory, open '/Users/duyizhen/Documents/nodeSNS/package.json'
+4 verbose stack     at Error (native)
+5 verbose cwd /Users/duyizhen/Documents/nodeSNS
+6 error Darwin 15.0.0
+7 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
+8 error node v5.0.0
+9 error npm  v3.3.6
+10 error path /Users/duyizhen/Documents/nodeSNS/package.json
+11 error code ENOENT
+12 error errno -2
+13 error syscall open
+14 error enoent ENOENT: no such file or directory, open '/Users/duyizhen/Documents/nodeSNS/package.json'
+14 error enoent This is most likely not a problem with npm itself
+14 error enoent and is related to npm not being able to find a file.
+15 verbose exit [ -2, true ]
