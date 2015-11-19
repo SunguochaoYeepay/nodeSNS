@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
+<head>
     <title><%= title %></title>
     <!-- bootstrap文件 -->
     <link rel='stylesheet' href='/css/bootstrap.min.css' />
@@ -10,10 +10,41 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="/js/bootstrap.min.js"></script>
 
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+</head>
+<body>
+<!--引入头部-->
+<% include templet/header.ejs%>
+<!--引入头部结束-->
+<!--内容区-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="page-header">
+                <h2>社区动态 <small>社区动态</small></h2>
+            </div>
 
-  </body>
+            <!--返回信息-->
+            <div class="alert alert-danger" role="alert">注册失败！</div>
+
+
+            <!--返回信息end-->
+
+
+        </div>
+        <div class="col-md-4">
+            <div class="jumbotron">
+                <h3>欢迎来到nodeSNS</h3>
+                <p>我是一个开源的SNS社区，邀请你加入吧！</p>
+                <p>
+                    <a class="btn btn-default btn-lg" href="/login" role="button">登 录</a>
+                    <a href="/reg" class="text-right">立即注册</a>
+                </p>
+
+            </div></div>
+    </div>
+</div>
+<!--内容区-->
+
+
+</body>
 </html>

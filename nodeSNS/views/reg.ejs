@@ -12,31 +12,9 @@
 
 </head>
 <body>
-<!--头部-->
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button aria-expanded="false" data-target="#bs-example-navbar-collapse-9" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand">Brand</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div id="bs-example-navbar-collapse-9" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
-<!--头部END-->
+<!--引入头部-->
+<% include templet/header.ejs%>
+<!--引入头部结束-->
 <!--内容区-->
 <div class="container">
 <div class="row">
@@ -45,9 +23,13 @@
             <h2>注册 <small>欢迎注册nodeSNS社区</small></h2>
         </div>
 
-        <!--返回信息-->
-        <div class="alert alert-danger" role="alert">注册失败！</div>
-
+         <% if(success==0){%>
+            <div class="alert alert-danger" role="alert"><%=messages%></div>
+         <%}else if(success==1){%>
+            <div class="alert alert-danger" role="alert"><%=messages%></div>
+         <%}else{%>
+            <div class="alert alert-danger" role="alert"></div>
+         <%}%>
 
 
         <!--返回信息end-->
@@ -55,11 +37,11 @@
         <form action="reg" method="post">
                 <div class="form-group">
                     <label for="exampleInputEmail1">邮箱</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    <input type="email" name="username" class="form-control" id="exampleInputEmail1" placeholder="Email">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">密码</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-lg">立即注册</button>

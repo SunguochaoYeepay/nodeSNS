@@ -1,11 +1,11 @@
 /**
  * Created by 孙国超 on 15/11/17.
  */
-var settings =require('settings');
-var Db = require('mongodb').Db;
-var Connection = require('mongodb').Connection;//；连接数据库
-
-module.exports = new Db(settings.db, new Server(settings.host, Connection.DEFAULT_PORT, {}));
+//var settings =require('./settings');
+//var Db = require('mongodb').Db;
+//var Connection = require('mongodb').Connection;//；连接数据库
+//
+//module.exports = new Db(settings.db, new Server(settings.host, Connection.DEFAULT_PORT, {}));
 
 /*
 var Schema = mongoose.Schema;   //  创建模型
